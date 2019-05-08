@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <tabs>
+    <Tab text="Untitled Tab 1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutY="-1.0" prefHeight="373.0" prefWidth="600.0">
+                     <children>
+                        <MenuButton layoutX="30.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Ordenar">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#orderDateTime" text="Fecha y hora" />
+                            <MenuItem mnemonicParsing="false" onAction="#orderAirline" text="Aerolinea" />
+                              <MenuItem mnemonicParsing="false" onAction="#orderNumber" text="Numero de vuelo" />
+                              <MenuItem mnemonicParsing="false" onAction="#orderDestination" text="Destino" />
+                              <MenuItem mnemonicParsing="false" onAction="#orderBoarding" text="Puertas de embarque" />
+                          </items>
+                        </MenuButton>
+                        <Pagination fx:id="pagination" layoutX="16.0" layoutY="73.0" prefHeight="287.0" prefWidth="572.0" />
+                        <ListView fx:id="list" layoutX="22.0" layoutY="87.0" prefHeight="228.0" prefWidth="552.0" />
+                        <MenuButton layoutX="220.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Buscar por">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#searchDateTime" text="Fecha y hora" />
+                              <MenuItem mnemonicParsing="false" onAction="#searchAirline" text="Aerolinea" />
+                              <MenuItem mnemonicParsing="false" onAction="#searchNumber" text="Numero de vuelo" />
+                              <MenuItem mnemonicParsing="false" onAction="#searchDestination" text="Destino" />
+                              <MenuItem mnemonicParsing="false" onAction="#searchBoarding" text="Puertas de embarque" />
+                           </items>
+                        </MenuButton>
+                        <TextArea fx:id="txtArea" layoutX="22.0" layoutY="87.0" prefHeight="229.0" prefWidth="551.0" />
+                        <TextField fx:id="txt" layoutX="362.0" layoutY="32.0" />
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
